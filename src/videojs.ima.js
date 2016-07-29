@@ -449,6 +449,9 @@
           settings.adLabel + podCount +
           remainingMinutes + ':' + remainingSeconds;
 
+      // make ad countdown available for the outside world
+      player.trigger('ad-time-update', [remainingMinutes, remainingSeconds]);
+
       // Update UI
       var playProgressRatio = currentTime / duration;
       var playProgressPercent = playProgressRatio * 100;
