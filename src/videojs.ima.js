@@ -170,7 +170,7 @@
           player.ima.onAdFullscreenClick_,
           false);
       adContainerDiv.appendChild(controlsDiv);
-      controlsDiv.appendChild(countdownDiv);
+      //controlsDiv.appendChild(countdownDiv);
       controlsDiv.appendChild(seekBarDiv);
       controlsDiv.appendChild(playPauseDiv);
       controlsDiv.appendChild(muteDiv);
