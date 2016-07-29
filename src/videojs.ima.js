@@ -170,7 +170,7 @@
           player.ima.onAdFullscreenClick_,
           false);
       adContainerDiv.appendChild(controlsDiv);
-      //controlsDiv.appendChild(countdownDiv);
+      controlsDiv.appendChild(countdownDiv);
       controlsDiv.appendChild(seekBarDiv);
       controlsDiv.appendChild(playPauseDiv);
       controlsDiv.appendChild(muteDiv);
@@ -497,9 +497,7 @@
       if (isPod && (totalAds > 1)) {
         podCount = ' (' + adPosition + ' of ' + totalAds + '): ';
       }
-      countdownDiv.innerHTML =
-          settings.adLabel + podCount +
-          remainingMinutes + ':' + remainingSeconds;
+      countdownDiv.innerHTML = ''; // never show a countdown
 
       // make ad countdown available for the outside world
       player.trigger('ad-time-update', [remainingMinutes, remainingSeconds]);
